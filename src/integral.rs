@@ -33,9 +33,7 @@ fn parse_type(args: TokenStream, variants_no: u64) -> Option<Type> {
             _ => None,
         },
 
-        [_, ..] => {
-            todo!()
-        }
+        [_, ..] => None,
 
         [] => Some(deduct_type(variants_no)),
     }
